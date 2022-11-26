@@ -4,7 +4,7 @@ import math
 from collections import OrderedDict
 
 from crossword import *
-
+yessir
 
 class Node():
     def __init__(self, state, parent, action):

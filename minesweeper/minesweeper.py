@@ -342,11 +342,11 @@ class MinesweeperAI():
             for y in range(self.height):
                 temp[0] = x
                 temp[1] = y
-                ***REMOVED*** = tuple(temp)
+                tup = tuple(temp)
 
-                if ***REMOVED*** not in self.moves_made and ***REMOVED*** not in self.mines:
+                if tup not in self.moves_made and tup not in self.mines:
                     cutter += 1
-                    clear.append(***REMOVED***)
+                    clear.append(tup)
         # If no moves can be taken, then player has won
         if cutter == 0:
             return None

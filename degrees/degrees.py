@@ -130,13 +130,13 @@ def shortest_path(source, target):
                             temps = front.frontier[y].action[1]
                             tempa = front.frontier[y].action
                             idiot = neighbors_for_person(temps)
-                            ***REMOVED*** = sorted(idiot)
+                            variable = sorted(idiot)
                             # Checks neighbors of node to see if target
-                            for k in range(len(***REMOVED***)):
+                            for k in range(len(variable)):
                 
-                                if target in ***REMOVED***[k]:
+                                if target in variable[k]:
                                     nod = Node("link", -1, [0] * 2)
-                                    nod.action = ***REMOVED***[k]
+                                    nod.action = variable[k]
                                     front.add(nod)
                                     front.frontier[-1].parent = y
 
@@ -148,7 +148,7 @@ def shortest_path(source, target):
                                     return pets
                             # Else node isn't target so neighbors of node are added to be explored if earlier neighbors aren't target               
                             front.frontier[y].state = "explored"
-                            for u in range(len(***REMOVED***)):
+                            for u in range(len(variable)):
                                 tmp = Node("unexplored", -1, [0] * 2)
                                 tmp.action = ***REMOVED***[u]
                                 if tmp.action[1] != target:
@@ -159,7 +159,7 @@ def shortest_path(source, target):
                                 # Ensures if target is found, that the node is recognized and creates a path instead of moving to the next node
                                 else:
                                     nod = Node("link", -1, [0] * 2)
-                                    nod.action = ***REMOVED***[u]
+                                    nod.action = variable[u]
                                     front.add(nod)
                                     front.frontier[-1].parent = y
                                     pets = make_path(front, source, target)
