@@ -299,8 +299,8 @@ class MinesweeperAI():
             # Calls subset method to see if it can infer anything
             idk = self.order_mines(self.knowledge[x])
             for p in range(len(idk)):
-                variable = idk[p]
-                if variable.cells != "None":
+                gaicantmaight = idk[p]
+                if gaicantmaight.cells != "None":
                     self.knowledge.append(idk[p])
 
 
@@ -342,11 +342,11 @@ class MinesweeperAI():
             for y in range(self.height):
                 temp[0] = x
                 temp[1] = y
-                tup = tuple(temp)
+                ***REMOVED*** = tuple(temp)
 
-                if tup not in self.moves_made and tup not in self.mines:
+                if ***REMOVED*** not in self.moves_made and ***REMOVED*** not in self.mines:
                     cutter += 1
-                    clear.append(tup)
+                    clear.append(***REMOVED***)
         # If no moves can be taken, then player has won
         if cutter == 0:
             return None
